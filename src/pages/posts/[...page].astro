@@ -52,7 +52,7 @@ const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 ---
 
 <PageLayout meta={meta} pageTitle="Posts">
-	<div class="grid gap-y-8 sm:grid-cols-[1fr_auto] sm:gap-x-8">
+	<div class="grid gap-y-8 sm:grid-cols-[1fr_auto] sm:gap-x-8 md:min-h-[calc(100%-108px)]">
 		<section aria-label="Blog post list" class="grow">
 			{
 				descYearKeys.map((yearKey) => (
