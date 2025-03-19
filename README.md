@@ -1,4 +1,4 @@
-# Project Name
+# HANE
 
 This project is based on the original work by **Artem Kutsan** and has been modified to create a customized version to better fit specific needs. The modifications include adjustments, improvements, and refinements to the original implementation while maintaining the core functionality.
 
