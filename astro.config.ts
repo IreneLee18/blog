@@ -9,8 +9,8 @@ import { defineConfig, envField } from "astro/config";
 import { siteConfig } from "./src/site.config";
 
 // Remark plugins
-import remarkDirective from "remark-directive"; /* handle ::: directives as nodes */
-import { remarkAdmonitions } from "./src/plugins/remark-admonitions"; /* add admonitions */
+import remarkDirective from "remark-directive";/* handle ::: directives as nodes */
+import { remarkAdmonitions } from "./src/plugins/remark-admonitions";/* add admonitions */
 import { remarkReadingTime } from "./src/plugins/remark-reading-time";
 
 // Rehype plugins
@@ -23,11 +23,14 @@ import {
   transformerNotationDiff,
 } from "@shikijs/transformers";
 
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
   image: {
     domains: ["webmention.io"],
   },
+
   integrations: [
     icon(),
     tailwind({
@@ -78,6 +81,7 @@ export default defineConfig({
       },
     }),
   ],
+
   markdown: {
     syntaxHighlight: false,
 
@@ -112,10 +116,13 @@ export default defineConfig({
       rehypeUnwrapImages,
     ],
   },
+
   // https://docs.astro.build/en/guides/prefetch/
   prefetch: true,
+
   // ! Please remember to replace the following site property with your own domain
   site: "http://astrocitrus.artemkutsan.pp.ua/",
+
   vite: {
     build: {
       sourcemap: true, // Source maps generation
@@ -125,6 +132,7 @@ export default defineConfig({
     },
     plugins: [rawFonts([".ttf", ".woff"])],
   },
+
   env: {
     schema: {
       WEBMENTION_API_KEY: envField.string({
@@ -144,10 +152,14 @@ export default defineConfig({
       }),
     },
   },
+
   server: {
     // port: 1234,
     host: true,
   },
+
+  outDir: 'server',
+  adapter: vercel(),
 });
 
 function rawFonts(ext: string[]) {
