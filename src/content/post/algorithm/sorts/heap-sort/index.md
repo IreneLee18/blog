@@ -48,7 +48,7 @@ tags: ["sort", "algorithm"]
 4. 再次將 Tree 重新排列至最大值都在最上面，接著一直重複「2、3」步驟，就可以得到正確的排列順序了。
 
 ## 範例
-```javascript=
+```javascript showLineNumbers
 function heapSort(arr) {
   const result = []; // 儲存最終排序結果
   // 重複取出最大值，直到陣列空了
@@ -107,7 +107,7 @@ console.log(heapSort([2, 8, 5, 3, 9, 1]));
 
 ## 拆解範例
 ### heap sort
-```javascript=
+```javascript showLineNumbers
 function heapSort(arr) {
   const result = []; // 儲存最終排序結果
   // 重複取出最大值，直到陣列空了
@@ -137,7 +137,7 @@ function heapSort(arr) {
     3. 重複操作直到根節點，完成整個陣列的堆化。
 <!-- - 把整個陣列轉換成一個「最大堆積」(滿足根節點比子節點大的結構)。
 - 從最後一個非葉節點開始，一路向上對每個節點進行 heapify，直到整個陣列都符合最大堆積規則。 -->
-```javascript=
+```javascript showLineNumbers
 // 最大堆建立（重複讓陣列成為堆）
 function buildMaxHeap(arr) {
   const lastLeafIndex = Math.floor(arr.length / 2) - 1;
@@ -161,7 +161,7 @@ function buildMaxHeap(arr) {
     2. 如果發現某個子節點的值大於根節點，則交換位置。
     3. 遞迴向下堆化該子節點，直到整個子樹都符合最大堆的特性。
 > 通常都會命名為 heapify
-```javascript=
+```javascript showLineNumbers
 // 堆化：確保某節點以下是最大堆
 function heapify(arr, heapSize, rootIndex) {
   let largestIndex = rootIndex;

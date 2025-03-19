@@ -38,7 +38,7 @@ updateDate: "2025-02-01T00:00:00Z"
 
 
 ## 範例
-```javascript=
+```javascript showLineNumbers
 function quickSort(array) {
   if (array.length <= 1) return array;
   let [pivot, ...restArray] = array;
@@ -145,7 +145,7 @@ console.log(quickSort([8, 9, 2, 5, 1, 7])); // [ 1, 2, 5, 7, 8, 9 ]
 ```
 ## 拆解範例
 ### quickSort 快速排列
-```javascript=
+```javascript showLineNumbers
 function quickSort(array) {
   if (array.length <= 1) return array;
   const stack = [];
@@ -193,7 +193,7 @@ function quickSort(array) {
            - 目的：後續再處理 `指標(T)`(`endIndex`) 到 `Pivot`(`pivotIndex`) 這個範圍
 
 ### partition 分割陣列，並且回傳 Pivot 位置
-```javascript=
+```javascript showLineNumbers
 function partition(array, startIndex, endIndex) {
   const pivot = array[endIndex];
   let target = startIndex; // target 負責紀錄下一個小於 `Pivot` 的元素要交換到的位置
@@ -224,7 +224,7 @@ function partition(array, startIndex, endIndex) {
 5. 回傳真正的 `Pivot` 位置
 
 ### swap 負責交換位置
-```javascript=
+```javascript showLineNumbers
 function swap(array, firstIndex, secondIndex) {
   // 1. 先暫存第一個位置，防止後面被替換時消失
   let temp = array[firstIndex];
