@@ -51,10 +51,7 @@ const groupedByYear = groupPostsByYear(page.data);
 const descYearKeys = Object.keys(groupedByYear).sort((a, b) => +b - +a);
 ---
 
-<PageLayout meta={meta}>
-	<h1 class="title mb-6 flex items-center gap-2">
-		Posts
-	</h1>
+<PageLayout meta={meta} pageTitle="Posts">
 	<div class="grid gap-y-8 sm:grid-cols-[1fr_auto] sm:gap-x-8">
 		<section aria-label="Blog post list" class="grow">
 			{

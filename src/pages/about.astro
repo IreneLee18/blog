@@ -1,23 +1,56 @@
 ---
-import PageLayout from "@/layouts/Base.astro";
+import PageLayout from '@/layouts/Base.astro';
 
 const meta = {
-	description: "I'm a starter theme for Astro.build",
-	title: "About",
+  description: "I'm a starter theme for Astro.build",
+  title: 'About',
 };
 ---
 
-<PageLayout meta={meta}>
-
-	<h1 class="title mb-6">About</h1>
-	<div class="prose prose-citrus max-w-none">
-		<p>
-			Hi, I’m Irene.
-		</p>
-		<p>Here are my some of my personalty:</p>
-		<ul class="list-inside list-disc" role="list">
-			<li>I'm fully responsive</li>
-		</ul>
-	</div>
-
+<PageLayout meta={meta} pageTitle="About">
+  <div class="prose prose-citrus max-w-none">
+    <p>
+      👋 Hi, I’m a <strong>Front-End Developer</strong> dedicated to crafting <strong
+        >smooth, intuitive, and accessible user experiences</strong
+      >. Proficient in <strong>React & TypeScript</strong>, I develop scalable,
+      maintainable web applications with clean and efficient code.
+    </p>
+    <div>
+      <h3>🚀 Transform Ideas into Code</h3>
+      <ul>
+        <li>
+          Convert client requirements into fully functional and responsive web
+          applications.
+        </li>
+        <li>
+          Work closely with <strong
+            >PMs, SAs, backend engineers, and designers</strong
+          > to ensure smooth development.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>🎨 Enhance UI/UX</h3>
+      <ul>
+        <li>
+          Focus on <strong>user experience and accessibility</strong> to create intuitive
+          interfaces.
+        </li>
+        <li>
+          Improve <strong>design consistency</strong> and optimize user interactions.
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>⚙️ Optimize Development Workflow</h3>
+      <ul>
+        <li>Reduce redundant code and improve project maintainability.</li>
+        <li>
+          Enhance performance and ensure a <strong
+            >clean, scalable codebase</strong
+          >.
+        </li>
+      </ul>
+    </div>
+  </div>
 </PageLayout>

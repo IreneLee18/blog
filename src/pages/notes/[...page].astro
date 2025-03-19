@@ -41,21 +41,16 @@ const paginationProps = {
 };
 ---
 
-<PageLayout meta={meta}>
-	<section>
-		<h1 class="title mb-6 flex items-center gap-2">
-			Notes
-		</h1>
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-			{
-				page.data.map((note) => (
-					<div>
-						<Note note={note} as="h4" isPreview />
-					</div>
-				))
-			}
-		</div>
+<PageLayout meta={meta} pageTitle="Notes">
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+		{
+			page.data.map((note) => (
+				<div>
+					<Note note={note} as="h4" isPreview />
+				</div>
+			))
+		}
+	</div>
 
-		<Pagination {...paginationProps} />
-	</section>
+	<Pagination {...paginationProps} />
 </PageLayout>
