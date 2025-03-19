@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Artem Kutsan",
+	author: "Irene Lee",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: "en-GB",
@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
 	// Meta property, found in src/components/BaseHead.astro L:42
 	ogLocale: "en_GB",
 	// Used to construct the meta title property found in src/components/BaseHead.astro L:11, and webmanifest name found in astro.config.ts L:42
-	title: "Citrus",
+	title: "HANE",
 };
 
 // Used to generate links in both the Header & Footer.
@@ -34,10 +34,18 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		path: "/posts/",
-		title: "Blog",
+		title: "Posts",
 	},
 	{
 		path: "/notes/",
 		title: "Notes",
+	},
+];
+
+// footer links
+export const footerLinks: { path: string; title: string }[] = [
+	{
+		path: "https://www.linkedin.com/in/irene-lee-690ab1232/",
+		title: "LinkedIn",
 	},
 ];

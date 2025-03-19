@@ -1,10 +1,9 @@
 {
-  "name": "astro-citrus",
+  "name": "blog",
   "version": "1.0.0",
   "private": false,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",

@@ -16,7 +16,7 @@ const { Content } = await render(note);
 	class:list={[isPreview && "inline-grid w-full rounded-lg bg-color-75 px-4 md:px-8 py-2 md:py-4"]}
 	data-pagefind-body={isPreview ? false : true}
 >
-	<Tag class="flex items-end title md:sticky md:top-8 md:z-10" class:list={{ "text-base": isPreview }}>
+	<Tag class="flex items-end title md:z-10" class:list={{ "text-base": isPreview }}>
 		{
 			isPreview ? (
 				<a class="citrus-link" href={`/notes/${note.id}/`}>
